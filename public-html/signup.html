@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>sign-up</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="../css/main.css" rel="stylesheet" type="text/css">
+</head>
+<body class="body">
+  <div id="main" class="item main">
+    <div id="title" class="item top">
+      <h2 w-color>Registration</h2>
+      <div class="line"></div>
+    </div>
+    <div id="middle" class="item middle">
+        <div id="icon-graphic" class="circle">
+          <img src="https://storage.googleapis.com/energy-score-testing/images/Picture3" alt="icon image of a person" class="icon"/>
+        </div>
+        <div id="card" class="card" >
+          <form id="registrationForm" class="form" action="https://energyscore-test.azurewebsites.net" enctype="application/x-www-form-urlencoded" method="post", target="_self" autocomplete="on">
+            <label for="name" class="label">Full Name</label> 
+            <input type="text" class="input" maxlength="256" name="fullName" placeholder="Full Name" id="name" required />
+            <label for="address" class="label">Street Address</label>
+            <input type="text" class="input" maxlength="256" name="address" data-name="streetAddress" placeholder="Street Address" id="streetAddress"  required/>
+            <div class="form innerRow">
+              <label for="city" class="label mod">City</label>
+              <label for="state" class="label small">State</label>
+              <label for="zip" class="label small">Zip</label>
+            </div>
+            <div class="form innerRow">
+              <input type="text" class="input mod" maxlength="256" name="city" data-name="field" placeholder="City" fieldtype="" id="city"  required/>
+              <input type="text" class="input small" maxlength="256" name="state" data-name="field" id="state" placeholder="ST" required/>
+              <input type="text" class="input small" maxlength="256" name="zip" data-name="field" placeholder="ZIP" fieldtype="" id="zip"  required/>
+            </div>
+            <label for="email" clas="label">Email:</label>
+            <input id="email" type="email" name="loginEmail" class="input" placeholder="Email" autocomplete="email"  required />
+            <label for="password" class="label">Password:</label>
+            <input id="password" type="password" name="userPassword" class="input" placeholder="Password" autocomplete="current-password"  required />
+            <button id="register" type="submit" name="buttonOfDoom" value="true" form="registrationForm">Register</button>
+          </form>
+          <p class="p error" id="error">Login attempt was unsuccessful.</p>
+          <p class="p callout" id="signup">Not Registered? <a href="./sign-up.html">Register Now</a></p>
+          <p class="p callout" id="forgot">Forgot Your Password? <a href="./reset-password.html">Reset it Now</a></p> 
+        </div>      
+    </div>
+  </div>
+  <script src="../js/signup.js" type="text/javascript"></script>
+</body>
+</html>

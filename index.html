@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Number of Users Enrolling</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="./css/main.css" rel="stylesheet" type="text/css">
+    </head>
+    <body class="body">
+        <div id="main" class="item main">
+            <div id="title" class="item top">
+                <h2 w-color>Signing Up?</h2>
+            <div class="line"></div>
+        </div>
+        <div id="middle" class="item middle">
+            <div id="icon-graphic" class="circle">
+                <img src="https://storage.googleapis.com/energy-score-testing/images/Picture3" alt="generic person icon">
+            </div>
+            <div id="card" class="mini-card">
+                <p class="text-block">Please indicate if you are logging for yourself or on behalf of your company</p>
+                <div id="columnWrapper" class="columnWrapper">
+                    <div id="leftColumn" class="columnBlock">
+                        <button id="one" title="self" class="button oneOrMore">
+                           Just Me
+                        </button>
+                    </div>
+                    <div id="rightColumn" class="columnBlock">
+                        <button rid="many" title="many" class="button oneOrMore">
+                           For Others
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            const button1=document.getElementById('one')
+            button1.addEventListener('click', () => location.href = "./public-html/signin.html")
+        </script>    
+    </body>
+</html>
