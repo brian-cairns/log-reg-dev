@@ -1,6 +1,7 @@
 let data = {}
 let error = document.getElementById('error')
 error.style.display = "none"
+const baseUrl = "https://energyscore-be.azurewebsites.net"
 
 let email = ''
 let password = ''
@@ -72,7 +73,6 @@ const stdHeaders = {
     'Access Control Allow Origin': '*'
 }
 
-const url = "https://energyscore-test.azurewebsites.net"
 const register = document.getElementById('register')
 
 register.addEventListener ('click', (e) => {
@@ -83,7 +83,8 @@ register.addEventListener ('click', (e) => {
 
 
 async function sendForm(data) {
-    console.log('sending ', data, ' to ', url, ' and awaiting a reply')
+    let uri = baseUrl + '/register'
+    console.log('sending ', data, ' to ', uri, ' and awaiting a reply')
     let result
     let options = {
         method: "POST", 

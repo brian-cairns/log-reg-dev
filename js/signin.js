@@ -1,11 +1,13 @@
 let email = ''
 let password = ''
+const baseUrl = "https://energyscore-be.azurewebsites.net"
 
 let message = document.getElementById('error')
 message.style.display = 'none'
 
 let loginButton = document.getElementById('login')
 loginButton.addEventListener('click', async (e) => {
+    let action = 'login'
     console.log(e.target.value)
     console.log('login email: ', email)
     console.log('password: ', password)
@@ -15,8 +17,9 @@ loginButton.addEventListener('click', async (e) => {
     }
     let valid = {}
     console.log('validation: ', validation)
+    let uri = baseUrl + '/' + action
     try {
-        await fetch('https://energyscore-test.azurewebsites.net', {
+        await fetch(uri, {
             method: "POST",
             headers: {
                 "Content-Type": 'application/json',
