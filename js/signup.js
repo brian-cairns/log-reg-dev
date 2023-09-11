@@ -69,7 +69,7 @@ getzip.addEventListener('change', (e) => {
 })
 
 const stdHeaders = {
-    'Content-Type': 'x-www-form-encoded',
+    'Content-Type': 'application/json',
     'Access Control Allow Origin': '*'
 }
 
@@ -112,7 +112,7 @@ async function sendForm(data) {
         mode: 'no cors'
     }
     try {
-        await fetch(url, options)
+        await fetch(uri, options)
             .then((response) => response.json())
             .then((body) => result = body)
     } catch (error) {
