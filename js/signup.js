@@ -91,7 +91,6 @@ async function sendForm(data) {
         headers: {
             "Content-Type": "application/json",
             'Access Control Allow Origin': '*',
-            'Cross-Origin-Resource-Policy': 'same-site' | 'same-origin' | 'cross-origin'
         },
         body: JSON.stringify(data),
         mode: 'no cors'
