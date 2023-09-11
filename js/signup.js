@@ -78,6 +78,22 @@ const register = document.getElementById('register')
 register.addEventListener ('click', (e) => {
  console.log(e)
  console.log(e.target)
+ console.log(email != '' && password != '' && name != '' && streetAddress != '' && city != '' && state != '' && zip != '')
+    if(email != '' && password != '' && name != '' && streetAddress != '' && city != '' && state != '' && zip != '') {
+        address = {
+            'street': streetAddress,
+            'city': city,
+            'state' : state,
+            'zip' : zip
+        }
+        data = {
+            'name': name,
+            'email' : email,
+            'password' : password,
+            'address': address
+        }
+        sendForm(data)
+    }
 })
     
 
